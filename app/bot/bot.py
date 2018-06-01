@@ -15,7 +15,7 @@ bot = Blueprint('bot', 'bot', template_folder='templates')
 telegram_api_key = '603679580:AAHtJ6he-CTCfv-aVtUiipAedc6l6_IxrZY'
 
 telega_bot = telepot.Bot(telegram_api_key)
-telega_bot.setWebhook('https://telega-tp.a3c1.starter-us-west-1.openshiftapps.com/bot/{}'.format(telegram_api_key))
+telega_bot.setWebhook('https://proxy-telega.a3c1.starter-us-west-1.openshiftapps.com/bot/{}'.format(telegram_api_key))
 
 
 @bot.route('/'+telegram_api_key, methods=['POST', 'GET'])
