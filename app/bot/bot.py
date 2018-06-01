@@ -1,4 +1,4 @@
-from flask import (Blueprint, flash, g, redirect, render_template, request,
+﻿from flask import (Blueprint, flash, g, redirect, render_template, request,
                    session, url_for)
 from flask_login import current_user, login_required, login_user, logout_user
 from jinja2 import TemplateNotFound
@@ -12,10 +12,10 @@ from app.models import Chat, botSignall, Chat_opt
 
 bot = Blueprint('bot', 'bot', template_folder='templates')
 
-telegram_api_key = '598589123:AAH3gPKY_4kvA50wrXQdnq6pGMd14TQId0E'
+telegram_api_key = '603679580:AAHtJ6he-CTCfv-aVtUiipAedc6l6_IxrZY'
 
 telega_bot = telepot.Bot(telegram_api_key)
-telega_bot.setWebhook('https://rudeak.gq/bot/{}'.format(telegram_api_key))
+telega_bot.setWebhook('http://telega-proxy-telega-proxy.a3c1.starter-us-west-1.openshiftapps.com/bot/{}'.format(telegram_api_key))
 
 
 @bot.route('/'+telegram_api_key, methods=['POST', 'GET'])
